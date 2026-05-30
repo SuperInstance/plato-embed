@@ -283,6 +283,7 @@ impl EmbeddingIndex {
         let mut assigned = vec![false; n];
         let mut clusters: Vec<Vec<usize>> = Vec::new();
 
+        #[allow(clippy::needless_range_loop)]
         for i in 0..n {
             if assigned[i] {
                 continue;
